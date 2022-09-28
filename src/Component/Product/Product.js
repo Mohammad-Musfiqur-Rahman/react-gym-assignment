@@ -4,7 +4,7 @@ const Product = (props) => {
     console.log(props.product)
     const {img, title, about, mints} = props.product
     return (
-        <div className='container bg-primary'>
+        <div className='container'>
 
             {/* <div className="row row-cols-1 row-cols-md-3 g-4"> */}
 

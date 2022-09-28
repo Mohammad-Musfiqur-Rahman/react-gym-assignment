@@ -1,9 +1,9 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Sidebar = () => {
     return (
-        <div classNameName='bg-secondary'>
-            <h1>Side bar</h1>
+        <div>
+            <h1>Side Bar</h1>
             <hr />
             {/* my-info */}
             <div className="card mb-3">
@@ -20,7 +20,14 @@ const Sidebar = () => {
             </div>
             </div>
             {/* select time */}
-
+            <select className="form-select" multiple aria-label="multiple select example">
+                <option selected className='fw-bold fs-4' >Add A Break</option>
+                <option value="1">10s</option>
+                <option value="2">20s</option>
+                <option value="3">30s</option>
+                <option value="4">40s</option>
+            </select>
+           
         </div>
     );
 };

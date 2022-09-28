@@ -28,7 +28,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-3 bg-secondary">
                     <Sidebar></Sidebar>
                 </div>           
             
