@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Sidebar = () => {
     return (
         <div>
+            <hr />
             <h1>Side Bar</h1>
             <hr />
             {/* my-info */}
@@ -39,7 +40,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             {/* toast btn */}
-            <button type="button" className="btn btn-warning p-3 fw-bolder">Activity Completed</button>
+            <button type="button" className="btn btn-primary p-3 fw-bolder">Activity Completed</button>
         </div>
     );
 };

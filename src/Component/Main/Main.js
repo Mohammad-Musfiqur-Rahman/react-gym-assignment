@@ -17,10 +17,10 @@ const Main = () => {
 
     return (
        
-        <div className='bg-info'>
-            <div className="row container mx-auto">
+        <div className='bg-secondary'>
+            <div className="row container mx-auto ">
 
-                <div className="col-9">
+                <div className="col-lg-9 col-sm-12">
                     <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                     {
                         products.map(product => <Product product={product}></Product> )
@@ -28,7 +28,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="col-3 bg-secondary">
+                <div className="col-lg-3 col-sm-12 bg-warning">
                     <Sidebar></Sidebar>
                 </div>           
             
