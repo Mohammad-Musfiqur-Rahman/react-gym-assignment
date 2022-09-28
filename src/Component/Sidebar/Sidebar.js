@@ -38,7 +38,8 @@ const Sidebar = () => {
                     <li className="list-group-item">Break time</li>
                 </ul>
             </div>
-           
+            {/* toast btn */}
+            <button type="button" className="btn btn-warning p-3 fw-bolder">Activity Completed</button>
         </div>
     );
 };
