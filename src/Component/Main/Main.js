@@ -21,7 +21,7 @@ const Main = () => {
             <div className="row container">
 
                 <div className="col-10">
-                    <div className="row row-cols-1 row-cols-md-3 g-4 py-4">
+                    <div className="row row-cols-1 row-cols-md-3 g-4 my-3 px-2">
                     {
                         products.map(product => <Product product={product}></Product> )
                     }
