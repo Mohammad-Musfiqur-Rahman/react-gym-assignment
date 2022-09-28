@@ -18,17 +18,17 @@ const Main = () => {
     return (
        
         <div className='bg-info'>
-            <div className="row container">
+            <div className="row container mx-auto">
 
-                <div className="col-10">
-                    <div className="row row-cols-1 row-cols-md-3 g-4 my-3 px-2">
+                <div className="col-9">
+                    <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                     {
                         products.map(product => <Product product={product}></Product> )
                     }
                     </div>
                 </div>
 
-                <div className="col-2">
+                <div className="col-3">
                     <Sidebar></Sidebar>
                 </div>           
             
