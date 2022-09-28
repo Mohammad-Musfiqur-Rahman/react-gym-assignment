@@ -23,7 +23,10 @@ const Main = () => {
                 <div className="col-lg-9 col-sm-12">
                     <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                     {
-                        products.map(product => <Product product={product}></Product> )
+                        products.map(product => <Product 
+                            product={product}
+                            key={product.id}
+                            ></Product> )
                     }
                     </div>
                 </div>
