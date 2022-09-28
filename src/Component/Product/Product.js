@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Product = () => {
+const Product = (props) => {
+    console.log(props.product)
+    const {img, title} = props.product
     return (
         <div className='container bg-primary'>
             <h1>hello from product</h1>
@@ -8,9 +10,9 @@ const Product = () => {
 
             <div className="col">
                 <div className="card h-100">
-                <img src="..." className="card-img-top" alt="..."/>
+                <img src={img} className="card-img-top" alt="..."/>
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                    <h5 className="card-title">Card title {title} </h5>
                     <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
                 <div className="card-footer">
