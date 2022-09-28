@@ -27,6 +27,17 @@ const Sidebar = () => {
                 <option value="3">30s</option>
                 <option value="4">40s</option>
             </select>
+            {/* diplay time */}
+            
+            <div className="card my-3">
+                <div className="card-header">
+                <h3>Exercise Details</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li className="list-group-item">Exercise time</li>
+                    <li className="list-group-item">Break time</li>
+                </ul>
+            </div>
            
         </div>
     );
