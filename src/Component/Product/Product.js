@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Product = (props) => {
-    // console.log(props.product)
+    // console.log(props)
     const {img, title, about, mints} = props.product
+    const {secBtn} = props
     return (
         <div className='container'>
 
@@ -18,7 +19,7 @@ const Product = (props) => {
                 <small className="text-muted fs-5">Time required:{mints}s</small>
 
                 <div className="card-footer">
-                    <button type="button" class="btn btn-success">Add to list</button>
+                    <button onClick={ () => secBtn(props.product.mints) } type="button" class="btn btn-success">Add to list</button>
                 </div>
                 </div>
             </div>

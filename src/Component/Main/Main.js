@@ -5,6 +5,13 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const Main = () => {
     const [products, setProducts] = useState([]);
+    const [secondTime, setSecond] = useState([]);
+
+    const secBtn = (sec) => {
+        // console.log(sec)
+        const newSec = [...secondTime, sec] 
+        setSecond(newSec);
+    }
 
     useEffect( () => {
         fetch('fakedata.json')
@@ -26,13 +33,14 @@ const Main = () => {
                         products.map(product => <Product 
                             product={product}
                             key={product.id}
+                            secBtn={secBtn}
                             ></Product> )
                     }
                     </div>
                 </div>
 
                 <div className="col-lg-3 col-sm-12 bg-warning">
-                    <Sidebar></Sidebar>
+                    <Sidebar secondTime={secondTime}></Sidebar>
                 </div>           
             
             </div>
