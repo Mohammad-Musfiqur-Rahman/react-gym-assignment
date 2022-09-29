@@ -1,20 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const getLocalItmes = () => {
+    let time = localStorage.getItem('time')
+    console.log(time)
+    if(time){
+        return JSON.parse(localStorage.getItem('time'));
+    }
+    else{
+        return ''
+    }
+}
+
 const Sidebar = ({secondTime}) => {
+
+    const [breakTime, SetBreakTime] = useState(getLocalItmes());
+    useEffect( () => {
+        localStorage.setItem('time', JSON.stringify(breakTime))
+    }, [breakTime])
+
+    const notify = () => toast('Well done')
+   
     // console.log(secondTime)
     const initialValue = 0;
     const sumWithInitial = secondTime.reduce(
     (previousValue, currentValue) => previousValue + currentValue,
     initialValue
     );
-    // console.log(sumWithInitial);
-    
-    const [breakTime, SetBreakTime] = useState("");
+    // console.log(sumWithInitial);    
     
     return (
         <div>
             <hr />
-            <h1>Side Bar</h1>
+            <h1>Information</h1>
             <hr />
             {/* my-info */}
             <div className="card mb-3">
@@ -51,8 +72,9 @@ const Sidebar = ({secondTime}) => {
                     <li className="list-group-item">Break time: <span className='fw-bolder text-danger fs-5'> {breakTime}</span></li>
                 </ul>
             </div>
-            {/* toast btn */}
-            <button type="button" className="btn btn-primary p-3 fw-bolder">Activity Completed</button>
+            {/* toast btn */}            
+            <button onClick={notify} type="button" className="btn btn-primary p-3 fw-bolder">Activity Completed</button>
+            <ToastContainer />
         </div>
     );
 };
